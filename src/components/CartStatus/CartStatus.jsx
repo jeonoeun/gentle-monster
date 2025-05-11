@@ -1,5 +1,6 @@
 import React from "react";
 import useCart from "../../hooks/useCart";
+import { FaShoppingCart } from "react-icons/fa";
 
 const CartStatus = () => {
   const {
@@ -8,7 +9,7 @@ const CartStatus = () => {
   return (
     <div className="cart-status">
       <div className="cart">
-        <i className="xi-cart-o"></i>
+        <FaShoppingCart size={15} />
         {products && <span>{products.length}</span>}
       </div>
     </div>

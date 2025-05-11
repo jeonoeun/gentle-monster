@@ -8,6 +8,7 @@ import "swiper/css";
 import ProductCard from "../ProductCard/ProductCard";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 
 import SwiperCore, { Autoplay, EffectFade, Navigation } from "swiper";
 
@@ -88,7 +89,18 @@ const Main = () => {
             </SwiperSlide>
           </Swiper>
           <section className="list-sec">
-            <h2>Featured Products</h2>
+            <div className="sec-title">
+              <h2>Featured Products</h2>
+              <div className="swiper-button">
+                <button ref={navigationPrevRef} className="prev">
+                  <FaLongArrowAltLeft />
+                </button>
+                <button ref={navigationNextRef} className="next">
+                  <FaLongArrowAltRight />
+                </button>
+              </div>
+            </div>
+
             <Swiper
               spaceBetween={30}
               slidesPerView={4}
@@ -105,14 +117,6 @@ const Main = () => {
                   ))}
               </ul>
             </Swiper>
-            <div className="swiper-button">
-              <button ref={navigationPrevRef} className="prev">
-                <i className="xi-angle-left-min"></i>
-              </button>
-              <button ref={navigationNextRef} className="next">
-                <i className="xi-angle-right-min"></i>
-              </button>
-            </div>
           </section>
 
           <section className="trend">
